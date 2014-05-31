@@ -1,10 +1,15 @@
 Spa::Application.routes.draw do
-  get "users/new"
-  match '/signup', to: 'users#new', via: 'get'
-  root 'static_pages#home'
-  get "static_pages/home"
-  get "static_pages/help"
-  get "static_pages/about"
+
+  get "home/index"
+  get 'user/edit' => 'users#edit', :as => :edit_current_user
+  get 'signup' => 'users#new', :as => :signup
+  get 'logout' => 'sessions#destroy', :as => :logout
+  get 'login' => 'sessions#new', :as => :login
+  
+  root 'home#index'
+
+  resources :sessions
+  
   resources :microposts
 
   resources :users

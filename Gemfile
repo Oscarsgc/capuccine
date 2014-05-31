@@ -36,8 +36,11 @@ end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'bcrypt-ruby'
+gem "bcrypt-ruby", :require => "bcrypt"
 
+gem 'nifty-generators', '~> 0.4.6'
+
+gem 'protected_attributes', '~> 1.0.7'
 # Use unicorn as the app server
 # gem 'unicorn'
 
@@ -46,3 +49,5 @@ gem 'bcrypt-ruby'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem "mocha", group: :test
