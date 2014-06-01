@@ -15,7 +15,7 @@
       <tr>
         <td><%= brand.name %></td>
         <td><%= link_to 'Editar', edit_brand_path(brand) %></td>
-        <td><%= link_to 'Eliminar', brand, method: :delete, data: { confirm: 'Seguro de eliminar la marca?' } %></td>
+        <td><%= button_to 'Eliminar', brand, method: :delete, data: { confirm: 'Seguro de eliminar la marca?' } %></td>
       </tr>
     <% end %>
   </tbody>

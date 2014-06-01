@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+brands = Brand.create([{name: "Nivea"}, {name: "Avon"}, {name: "Care"}, {name: "Azaleia"}])
+	categories = Category.create([{name: "Facial"}, {name: "Corporal"}, {name: "Maquillaje"}, {name: "Depilacion"}, {name: "Afeitado"}, {name: "Fragancia"}, {name: "Emulsion"}, {name: "Hidratacion"}])

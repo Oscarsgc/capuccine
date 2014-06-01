@@ -15,7 +15,7 @@
       <tr>
         <td><%= category.name %></td>
         <td><%= link_to 'Editar', edit_category_path(category) %></td>
-        <td><%= link_to 'Eliminar', category, method: :delete, data: { confirm: 'Seguro de eliminar la categoria?' } %></td>
+        <td><%= button_to 'Eliminar', category, method: :delete, data: { confirm: 'Seguro de eliminar la categoria?' } %></td>
       </tr>
     <% end %>
   </tbody>

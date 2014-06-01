@@ -16,12 +16,11 @@
     <% @products.each do |product| %>
       <tr>
         <td><%= product.name %></td>
-        <td><%= product.description %></td>
         <td><%= product.category.name %></td>
         <td><%= product.brand.name %></td>
         <td><%= link_to 'Ver', product %></td>
         <td><%= link_to 'Editar', edit_product_path(product) %></td>
-        <td><%= link_to 'Eliminar', product, method: :delete, data: { confirm: 'Seguro de Eliminar el producto?' } %></td>
+        <td><%= button_to 'Eliminar', product, method: :delete, data: { confirm: 'Seguro de Eliminar el producto?' } %></td>
       </tr>
     <% end %>
   </tbody>
