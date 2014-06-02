@@ -1,0 +1,26 @@
+<h1>Todas las marcas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @brands.each do |brand| %>
+      <tr>
+        <td><%= brand.name %></td>
+        <td><%= link_to 'Editar', edit_brand_path(brand) %></td>
+        <td><%= button_to 'Eliminar', brand, method: :delete, data: { confirm: 'Seguro de eliminar la marca?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Crear Marca', new_brand_path %>

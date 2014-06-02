@@ -1,0 +1,26 @@
+<h1>Todas las Categorias</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td><%= category.name %></td>
+        <td><%= link_to 'Editar', edit_category_path(category) %></td>
+        <td><%= button_to 'Eliminar', category, method: :delete, data: { confirm: 'Seguro de eliminar la categoria?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Crear Categoria', new_category_path %>

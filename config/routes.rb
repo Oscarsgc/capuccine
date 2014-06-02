@@ -1,12 +1,21 @@
 Spa::Application.routes.draw do
 
-  get "home/index"
+  resources :products
+
+  resources :categories do
+    resources :products
+    end
+
+  resources :brands do
+    resources :products
+    end
+
   get 'user/edit' => 'users#edit', :as => :edit_current_user
   get 'signup' => 'users#new', :as => :signup
   get 'logout' => 'sessions#destroy', :as => :logout
   get 'login' => 'sessions#new', :as => :login
   
-  root 'home#index'
+  root 'static_pages#home'
 
   resources :sessions
   
