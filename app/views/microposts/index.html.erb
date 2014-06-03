@@ -1,10 +1,13 @@
-<h1>Todos los posts</h1>
+
+<br>
+<br><h1>Novedades</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>User</th>
+      <th>Titulo</th>
+      <th>Contenido</th>
+      <th>Usuario</th>
       <th></th>
       <th></th>
       <th></th>
@@ -15,6 +18,7 @@
     <% @microposts.each do |micropost| %>
       <tr>
         <td><%= micropost.title %></td>
+        <td><%= micropost.content %></td>
         <td><%= micropost.user_id %></td>
         <td><%= link_to 'Ver', micropost %></td>
         <td><%= link_to 'Editar', edit_micropost_path(micropost) %></td>
