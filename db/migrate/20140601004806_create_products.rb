@@ -5,8 +5,6 @@ class CreateProducts < ActiveRecord::Migration
       t.text :description
       t.references :category, index: true
       t.references :brand, index: true
-      t.references :user, index: true
-
       t.timestamps
     end
   end
