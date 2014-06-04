@@ -1,14 +1,12 @@
 Spa::Application.routes.draw do
 
+  resources :contacts
+
   resources :products
 
   resources :categories do
     resources :products
-    end
-
-  resources :brands do
-    resources :products
-    end
+  end
 
   get 'user/edit' => 'users#edit', :as => :edit_current_user
   get 'signup' => 'users#new', :as => :signup
