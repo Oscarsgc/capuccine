@@ -5,7 +5,6 @@
     <tr>
       <th>Nombre</th>
       <th>Categoria</th>
-      <th>Marca</th>
       <th></th>
       <th></th>
       <th></th>
@@ -17,7 +16,6 @@
       <tr>
         <td><%= product.name %></td>
         <td><%= product.category.name %></td>
-        <td><%= product.brand.name %></td>
         <td><%= link_to 'Ver', product %></td>
         <td><%= link_to 'Editar', edit_product_path(product) %></td>
         <td><%= button_to 'Eliminar', product, method: :delete, data: { confirm: 'Seguro de Eliminar el producto?' } %></td>

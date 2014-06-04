@@ -1,24 +1,24 @@
 <p id="notice"><%= notice %></p>
-
+<CENTER>
 <p>
-  <strong>Nombre:</strong>
-  <%= @product.name %>
+  
+  <h1><%= @product.name %></h1>
 </p>
 
 <p>
-  <strong>Descripcion:</strong>
+  <strong>Descripcion:</strong><br>
   <%= @product.description %>
 </p>
 
 <p>
-  <strong>Categoria:</strong>
+  <strong>Categoria:</strong><br>
   <%= @product.category.name %>
 </p>
 
 <p>
-  <strong>Marca:</strong>
-  <%= @product.brand.name %>
+<br>
+	<%= image_tag @product.photo.url(:medium) %>
 </p>
-
 <%= link_to 'Editar', edit_product_path(@product) %> |
 <%= link_to 'Volver', products_path %>
+</CENTER>
