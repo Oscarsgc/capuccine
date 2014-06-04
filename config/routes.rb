@@ -17,6 +17,10 @@ Spa::Application.routes.draw do
   
   root 'static_pages#home'
 
+  get '/germanine-de-capuccini-en-bolivia' => 'static_pages#gdc_bolivia'
+  get '/idi' => 'static_pages#idi'
+  get '/compromiso' => 'static_pages#compromiso'
+
   resources :sessions
   
   resources :microposts
