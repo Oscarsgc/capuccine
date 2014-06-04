@@ -1,8 +1,6 @@
 <p id="notice"><%= notice %></p>
 <div id="project-gallery">
-					<div class="thumb" ><img src="img/dummies/slides/01.jpg" alt="Thumbnail" /></div>
-					<div class="thumb" ><img src="img/dummies/slides/02.jpg" alt="Thumbnail" /></div>
-					<div class="thumb" ><img src="img/dummies/slides/03.jpg" alt="Thumbnail" /></div>
+					<div class="thumb" ><%= image_tag @product.photo.url %></div>
 				</div>
 				
 				<div id="project-info">
@@ -11,10 +9,10 @@
 					<blockquote ><%= @product.description %></blockquote>
 					
 					<p><%= @product.category %></p>
-					
+
 					<div id="project-sheet">
-						<p><strong>Client</strong><br/>Mr. Tanaka</p>
-						<p><strong>Date</strong><br/>Jan, 12 2012</p>
+						<%= link_to 'Editar', edit_product_path(@product) , :class=>"link-button blue"%>
+						<%= link_to 'Volver', products_path , :class=>"link-button"%>
 					</div>
 				</div>
 				
@@ -38,36 +36,3 @@
 					</ul>
 				</div>
 				<!-- ENDS related -->
-
-
-
-
-
-
-
-
-
-
-<CENTER>
-<p>
-  
-  <h1><%= @product.name %></h1>
-</p>
-
-<p>
-  <strong>Descripcion:</strong><br>
-  <%= @product.description %>
-</p>
-
-<p>
-  <strong>Categoria:</strong><br>
-  <%= @product.category%>
-</p>
-
-<p>
-<br>
-	<%= image_tag @product.photo.url(:medium) %>
-</p>
-<%= link_to 'Editar', edit_product_path(@product) %> |
-<%= link_to 'Volver', products_path %>
-</CENTER>
