@@ -9,4 +9,13 @@ class StaticPagesController < ApplicationController
   	
   end
 
+  def gdc_bolivia  	
+  end
+
+  def idi
+  end
+
+  def compromiso  	
+  end
+
 end
