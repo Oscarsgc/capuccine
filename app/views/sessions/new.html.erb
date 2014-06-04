@@ -1,7 +1,5 @@
 <h1 class="heading"> Iniciar Sesion </h2>
 
-<p>No tienes una cuenta? <%= link_to "Registrate!", signup_path %></p>
-
 <%= form_tag sessions_path do %>
   <p>
     <%= label_tag :login, "Nombre de usuario o Email" %><br />
@@ -11,5 +9,5 @@
     <%= label_tag :password, "Contraseña" %><br />
     <%= password_field_tag :password %>
   </p>
-  <p><%= submit_tag "Iniciar Sesion", :class => "link-button"%></p>
+  <p><%= submit_tag "Iniciar Sesion", :class => "link-button blue"%></p>
 <% end %>

@@ -16,5 +16,5 @@
     <%= f.label :password_confirmation, "Confirmacion Contraseña" %><br />
     <%= f.password_field :password_confirmation %>
   </p>
-  <p><%= f.submit (@user.new_record? ? "Registrarse" : "Update") %></p>
+  <p><%= f.submit (@user.new_record? ? "Registrarse" : "Update"), :class => "link-button green"%></p>
 <% end %>
