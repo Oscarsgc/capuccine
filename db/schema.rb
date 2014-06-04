@@ -47,7 +47,6 @@ ActiveRecord::Schema.define(version: 20140604164056) do
     t.string   "name"
     t.text     "description"
     t.integer  "category_id"
-    t.integer  "brand_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "photo_file_name"
@@ -56,7 +55,6 @@ ActiveRecord::Schema.define(version: 20140604164056) do
     t.datetime "photo_updated_at"
   end
 
-  add_index "products", ["brand_id"], name: "index_products_on_brand_id"
   add_index "products", ["category_id"], name: "index_products_on_category_id"
 
   create_table "users", force: true do |t|

@@ -1,11 +1,13 @@
 class MicropostsController < ApplicationController
-  before_action :set_micropost, only: [:show, :edit, :update, :destroy]
+#  before_action :set_micropost, only: [:show, :edit, :update, :destroy]
+before_filter :login_required, :only => [:new, :create, :edit, :update, :destroy]
 
   def index
     @microposts = Micropost.all
   end
 
   def show
+    @micropost = Micropost.find(params[:id])
   end
 
   def new
@@ -13,6 +15,7 @@ class MicropostsController < ApplicationController
   end
 
   def edit
+    @micropost = Micropost.find(params[:id])
   end
 
   def create

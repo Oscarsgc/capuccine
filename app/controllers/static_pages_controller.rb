@@ -18,7 +18,4 @@ class StaticPagesController < ApplicationController
   def compromiso  	
   end
 
-  def contacto  	
-  end
-
 end

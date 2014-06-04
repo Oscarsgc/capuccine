@@ -4,9 +4,7 @@ Spa::Application.routes.draw do
 
   resources :products
 
-  resources :categories do
-    resources :products
-  end
+  resources :categories
 
   get 'user/edit' => 'users#edit', :as => :edit_current_user
   get 'signup' => 'users#new', :as => :signup
@@ -14,6 +12,8 @@ Spa::Application.routes.draw do
   get 'login' => 'sessions#new', :as => :login
   
   root 'static_pages#home'
+
+  get '/products/filter_by' => 'products#filter_by'
 
   get '/germanine-de-capuccini-en-bolivia' => 'static_pages#gdc_bolivia'
   get '/idi' => 'static_pages#idi'
