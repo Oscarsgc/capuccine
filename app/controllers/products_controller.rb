@@ -1,11 +1,17 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :edit, :update, :destroy]
-
+ # before_action :set_product, only: [:show, :edit, :update, :destroy]
+ #skip_before_filter :login_required, :only => [:index, :show]
+ before_filter :login_required, :only => [:new, :create, :edit, :update, :destroy]
   def index
     @products = Product.all
   end
 
   def show
+    @product = Product.find(params[:id])
+  end
+
+  def filter_by
+    @products = Product.where("category like ?", "%#{params[:categoria]}%" )    
   end
 
 
@@ -14,6 +20,7 @@ class ProductsController < ApplicationController
   end
 
   def edit
+    @category = Category.find(params[:id])
   end
 
   def create

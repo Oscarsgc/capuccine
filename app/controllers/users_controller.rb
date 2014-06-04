@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       session[:user_id] = @user.id
-      flash[:success] = {:class => "infobox-success", :body => 'Acabajoo'}
+      #flash[:success] = {:class => "infobox-success", :body => 'Acabajoo'}
       redirect_to root_url 
     else
       render :action => 'new'
@@ -23,7 +23,7 @@ class UsersController < ApplicationController
   def update
     @user = current_user
     if @user.update_attributes(params[:user])
-      redirect_to root_url, :notice => "Your profile has been updated."
+      redirect_to root_url#, :notice => "Your profile has been updated."
     else
       render :action => 'edit'
     end
