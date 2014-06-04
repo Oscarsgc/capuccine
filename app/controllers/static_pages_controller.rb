@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
+    @products = Product.paginate(:per_page => 6, :page => params[:page])
   end
 
   def help

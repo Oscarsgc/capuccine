@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
  #skip_before_filter :login_required, :only => [:index, :show]
  before_filter :login_required, :only => [:new, :create, :edit, :update, :destroy]
   def index
-    @products = Product.all
+    @products = Product.paginate(:per_page => 6, :page => params[:page])
   end
 
   def show
@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
   end
 
   def filter_by
-    @products = Product.where("category like ?", "%#{params[:category]}%" )    
+    @products = Product.where("category like ?", "%#{params[:category]}%").paginate(:per_page => 6, :page => params[:page])
   end
 
 

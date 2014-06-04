@@ -16,14 +16,6 @@
         <% end %>          
         </ul>
         <!-- ENDS work list --> 
-
-        <!-- pager -->
-        <ul class="pager cf">
-          <li class="paged">Page 1 of 4 </li>
-          <li class="active"><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-        </ul>
-        <!-- ENDS pager -->
+  <%= will_paginate @products, :previous_label => 'Anterior', :next_label => 'Siguiente' %>
+        
 <%= link_to 'Crear Producto', new_product_path, :class=>"link-button green" %>

@@ -20,6 +20,25 @@
 				
 		<!-- tagline -->
 		<div class="tagline"><h1>GERMAINE DE CAPUCCINI</h1></div>
+		<h1>Todos los productos</h1>
+
+        <ul class="nav-categories cf">
+        </ul>
+        <!-- ENDS categories -->
+        <!-- work list -->
+        <ul class="work-list cf" id="filter-container">
+        <% @products.each do |product|%>  
+          <li>
+            <a href="/products/<%=product.id%>" class="thumb" >
+              <%= image_tag product.photo.url %>
+              <div class="img-overlay">Ver producto</div>
+            </a>
+            <a href="/products/<%=product.id%>"  class="title"><%=product.name%></a>
+          </li>
+        <% end %>          
+        </ul>
+        <!-- ENDS work list --> 
+  <Center><%= will_paginate @products, :previous_label => 'Anterior', :next_label => 'Siguiente' %></Center>
 		<!-- ENDS tagline -->
 		
 		<!-- JS -->
