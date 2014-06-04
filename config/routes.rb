@@ -13,7 +13,7 @@ Spa::Application.routes.draw do
   
   root 'static_pages#home'
 
-  get '/products/filter_by' => 'products#filter_by'
+  get '/products/filter_by/:category' => 'products#filter_by'
 
   get '/germanine-de-capuccini-en-bolivia' => 'static_pages#gdc_bolivia'
   get '/idi' => 'static_pages#idi'
