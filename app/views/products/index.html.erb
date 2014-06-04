@@ -1,23 +1,17 @@
 <h1>Todos los productos</h1>
 
         <ul class="nav-categories cf">
-          <li class="current"><a href="#" >all</a></li>
-          <li><a href="#" >print</a></li>
-          <li><a href="#" >photography</a></li>
-          <li><a href="#" >web design</a></li>
         </ul>
         <!-- ENDS categories -->
         <!-- work list -->
         <ul class="work-list cf" id="filter-container">
         <% @products.each do |product|%>  
           <li>
-            <a href="project.html" class="thumb" >
-              <img src="images/dummies/f-01.jpg" alt="Thumbnail" />
-              <div class="img-overlay">VIEW PROJECT</div>
+            <a href="/products/<%=product.id%>" class="thumb" >
+              <%= image_tag product.photo.url %>
+              <div class="img-overlay">Ver producto</div>
             </a>
-            <a href="single.html"  class="title"><%=product.name%></a>
-            
-            <div class="categories"><a href="#" >webdesign, </a><a href="#" >print, </a><a href="#" >photo</a></div>
+            <a href="/products/<%=product.id%>"  class="title"><%=product.name%></a>
           </li>
         <% end %>          
         </ul>
@@ -32,12 +26,4 @@
           <li><a href="#">4</a></li>
         </ul>
         <!-- ENDS pager -->
-
-
-
-
-
-
-
-
-<%= link_to 'Crear Producto', new_product_path %>
+<%= link_to 'Crear Producto', new_product_path, :class=>"link-button green" %>
