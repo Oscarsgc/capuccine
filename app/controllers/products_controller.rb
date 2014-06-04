@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
   end
 
   def filter_by
-    @products = Product.where("category like ?", "%#{params[:categoria]}%" )    
+    @products = Product.where("category like ?", "%#{params[:category]}%" )    
   end
 
 
@@ -20,7 +20,7 @@ class ProductsController < ApplicationController
   end
 
   def edit
-    @category = Category.find(params[:id])
+    @product = Product.find(params[:id])
   end
 
   def create
@@ -35,6 +35,7 @@ class ProductsController < ApplicationController
   end
 
   def update
+    @product = Product.find(params[:id])
     respond_to do |format|
       if @product.update(product_params)
         format.html { redirect_to @product}
@@ -59,6 +60,6 @@ class ProductsController < ApplicationController
 
     
     def product_params
-      params.require(:product).permit(:name, :description, :category_id, :brand_id, :photo)
+      params.require(:product).permit(:name, :description, :category, :photo)
     end
 end

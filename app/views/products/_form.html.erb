@@ -21,8 +21,8 @@
   </div><br>
 
   <div class="field">
-    <%= f.label :category_id, "Categoria" %><br>
-    <%=f.collection_select(:category_id, Category.all, :id, :name)%></p>
+    <%= f.label :category, "Categoria" %><br>
+    <%=f.collection_select(:category, Category.all, :name, :name)%></p>
   </div><br>
   
   <div class="field">
