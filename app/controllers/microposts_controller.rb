@@ -18,17 +18,28 @@ before_filter :login_required, :only => [:new, :create, :edit, :update, :destroy
     @micropost = Micropost.find(params[:id])
   end
 
-  def create
-    @micropost = Micropost.new(micropost_params)
+  #def create
+   # @micropost = Micropost.new(micropost_params)
     #@micropost = current_user.microposts.build(micropost_params)
-    respond_to do |format|
-      if @micropost.save
-        format.html { redirect_to @micropost}
-      else
-        format.html { render action: 'new' }
-      end
+#    respond_to do |format|
+ #     if @micropost.save
+  #      format.html { redirect_to @micropost}
+   #   else
+    #    format.html { render action: 'new' }
+#      end
+ #   end
+#  end
+
+  def create
+    @micropost = current_user.microposts.build(micropost_params)
+    if @micropost.save
+      redirect_to @micropost
+    else
+      render 'static_pages/home'
     end
   end
+
+
 
   def update
     respond_to do |format|
@@ -44,7 +55,6 @@ before_filter :login_required, :only => [:new, :create, :edit, :update, :destroy
     @micropost.destroy
     respond_to do |format|
       format.html { redirect_to microposts_url }
-      format.json { head :no_content }
     end
   end
 

@@ -1,3 +1,4 @@
+<% provide(:title, 'Todas las solicitudes') %>
 <center>
 <h1>Todas los solicitudes</h1>
 
@@ -7,7 +8,6 @@
       <th>Nombre</th>
       <th>Email</th>
       <th>Celular</th>
-      <th>Direccion</th>
       <th></th>
       <th></th>
     </tr>
@@ -19,7 +19,6 @@
         <td><%= contact.name %></td>
         <td><%= contact.email %></td>
         <td><%= contact.cellphone %></td>
-        <td><%= contact.direction %></td>
         <td><%= link_to 'Ver', contact %></td>
         <td><%= button_to 'Eliminar', contact, method: :delete, data: { confirm: 'Seguro de eliminar?' } %></td>
       </tr>

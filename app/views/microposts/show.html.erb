@@ -1,19 +1,16 @@
+<% provide(:title, @micropost.title) %>
 <p id="notice"><%= notice %></p>
+<p>
+  <strong>Title:</strong>
+  <%= @micropost.title %>
+</p>
+
 
 <p>
   <strong>Content:</strong>
   <%= @micropost.content %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @micropost.user_id %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @micropost.title %>
-</p>
 <p>
 <br>
 	<%= image_tag @product.photo.url(:medium) %>
