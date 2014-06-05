@@ -22,10 +22,7 @@ ActiveRecord::Schema.define(version: 20140604164056) do
   create_table "contacts", force: true do |t|
     t.string   "name"
     t.string   "email"
-    t.string   "subject"
-    t.string   "phone"
     t.string   "cellphone"
-    t.string   "direction"
     t.string   "commentaries"
     t.datetime "created_at"
     t.datetime "updated_at"
