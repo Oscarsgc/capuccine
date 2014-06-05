@@ -40,6 +40,7 @@ before_filter :login_required, :only => [:new, :create, :edit, :update, :destroy
   end
 
   def update
+    @micropost = Micropost.find(params[:id])
     respond_to do |format|
       if @micropost.update(micropost_params)
         format.html { redirect_to @micropost}

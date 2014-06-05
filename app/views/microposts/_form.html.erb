@@ -30,7 +30,7 @@
   </div><br>
   
   <div class="actions">
-    <%= f.submit "Crear Post"%>
+    <%= f.submit (@micropost.new_record? ? 'Crear Post' : 'Guardar Cambios'), :class => 'link-button blue' %>
   </div>
 <% end %>
 </center>

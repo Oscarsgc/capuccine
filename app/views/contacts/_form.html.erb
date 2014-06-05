@@ -13,20 +13,19 @@
     </div>
   <% end %>
 
+  <table>
+    <tr>
+      <th><%= f.label :name, "Nombre" %>
+    <%= f.text_field :name %></th>
+      <th><%= f.label :email, "Email" %>
+    <%= f.text_field :email %></th>
+      <th><%= f.label :cellphone, "Celular" %>
+    <%= f.text_field :cellphone %></th>
+    </tr>
+  </table>
+  </br>
   <div class="field">
-    <%= f.label :name, "Nombre" %><br>
-    <%= f.text_field :name %>
-  </div><br>
-  <div class="field">
-    <%= f.label :email, "Email" %><br>
-    <%= f.text_field :email %>
-  </div><br>
-  <div class="field">
-    <%= f.label :cellphone, "Celular" %><br>
-    <%= f.text_field :cellphone %>
-  </div><br>
-  <div class="field">
-    <%= f.label :commentaries, "Comentarios" %><br>
+    <b><%= f.label :commentaries, "Comentarios" %></br>
     <%= f.text_area :commentaries %>
   </div><br>
   <div class="actions">
