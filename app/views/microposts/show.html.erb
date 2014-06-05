@@ -18,7 +18,7 @@
 	<CENTER><%= image_tag @micropost.photo.url(:medium) %></CENTER>
 </p>
 
-<%= link_to 'Editar', edit_micropost_path(@micropost) %> |
-<%= link_to 'Volver', microposts_path %>
+<%= link_to 'Editar', edit_micropost_path(@micropost), :class => "link-button blue" %> |
+<%= link_to 'Volver', microposts_path, :class => "link-button" %>
 </div>
 </div>
