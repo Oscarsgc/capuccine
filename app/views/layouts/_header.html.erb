@@ -13,7 +13,9 @@
         
       </header>
       <!-- ENDS HEADER -->
-      
+      <%if current_user%>
+        <p align="right"><a href="/logout">Cerrar Sesion</a></p>
+        <%end%>
       <!-- NAV -->
       <nav class="cf">
         <ul id="nav" class="sf-menu">
@@ -50,13 +52,15 @@
               <li><a href="/products/filter_by/En Cabina-M">En cabina</a></li>
             </ul>
           </li>
+          <%if !current_user%>
           <li><a href="#">SPA</a>
             <ul>
               <li><a href="http://www.sperience.eu">Vivi un momento de autenticas sensaciones</a></li>
             </ul>
           </li>
+          <%end%>
           <li><a href="/microposts">NOTICIAS/NOVEDADES</a></li>
-          <!--li><a href="#">BLOG PROFESIONAL</a></li-->
+          <%if !current_user%>
           <li><a href="#">EMPRESA</a>
             <ul>
               <li><a href="/germanine-de-capuccini-en-bolivia">Germaine de Capuccini En Bolivia</a></li>
@@ -65,5 +69,11 @@
             </ul>
           </li>
           <li class="important"><a href="/contacts/new">CONTACTO</a></li>
+          <%end%>
+          <%if current_user%>
+            <li><a href="/products/new">CREAR PRODUCTO</a></li>
+            <li><a href="/microposts/new">CREAR POST</a></li>
+            <li><a href="/contacts">SUGERENCIAS</a></li>
+          <% end %>
         </ul>
       </nav>

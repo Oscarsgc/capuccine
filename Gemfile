@@ -24,6 +24,8 @@ group :production do
   gem 'rails_12factor', '0.0.2'
 end
 
+gem 'mysql2', '~> 0.3.16'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
