@@ -1,8 +1,11 @@
+<% provide(:title, @product.name) %>
+
 <div class="page-content">
 <div class="entry-content -cf">
 <% if notice %>
 <p class="infobox-success"><%= notice %></p>
 <%end%>
+
 <div id="project-gallery">
 					<div class="thumb" ><%= image_tag @product.photo.url %></div>
 				</div>

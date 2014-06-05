@@ -1,3 +1,4 @@
+<% provide(:title, 'Todos los Productos') %>
 <h1>Todos los productos</h1>
 
         <ul class="nav-categories cf">
@@ -11,7 +12,7 @@
               <%= image_tag product.photo.url %>
               <div class="img-overlay">Ver producto</div>
             </a>
-            <a href="/products/<%=product.id%>"  class="title"><%=product.name%></a>
+            <center><a href="/products/<%=product.id%>"  class="title"><%=product.name%></a></center>
           </li>
         <% end %>          
         </ul>

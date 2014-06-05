@@ -1,6 +1,6 @@
 class ContactsController < ApplicationController
-  before_action :set_contact, only: [:show, :edit, :update, :destroy]
-
+#  before_action :set_contact, only: [:show, :edit, :update, :destroy]
+before_filter :login_required, :only => [:index, :edit, :update, :destroy]
   def index
     @contacts = Contact.paginate(:per_page => 5, :page => params[:page])
   end
@@ -52,6 +52,6 @@ class ContactsController < ApplicationController
     end
 
     def contact_params
-      params.require(:contact).permit(:name, :email, :subject, :phone, :cellphone, :direction, :commentaries)
+      params.require(:contact).permit(:name, :email, :cellphone, :commentaries)
     end
 end
