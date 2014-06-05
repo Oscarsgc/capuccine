@@ -1,6 +1,6 @@
 <% provide(:title, 'Editar producto') %>
-<h1>Editar producto</h1>
+<CENTER><h1>Editar producto</h1>
 <%= render 'form' %>
-<br>
-<%= link_to 'Ver', @product %> |
-<%= link_to 'Volver', products_path %>
+
+<%= link_to 'Ver', @product, :class => "link-button blue" %> 
+<%= link_to 'Volver', products_path, :class => "link-button" %></CENTER>
