@@ -4,19 +4,18 @@
 
 <p id="notice"><%= notice %></p>
 <p>
-  <strong>Title:</strong>
-  <%= @micropost.title %>
+  
+  <CENTER><H1><%= @micropost.title %></H1></CENTER>
 </p>
 
-
+<br>
 <p>
-  <strong>Content:</strong>
   <%= @micropost.content %>
 </p>
 
 <p>
 <br>
-	<%= image_tag @micropost.photo.url(:medium) %>
+	<CENTER><%= image_tag @micropost.photo.url(:medium) %></CENTER>
 </p>
 
 <%= link_to 'Editar', edit_micropost_path(@micropost) %> |
