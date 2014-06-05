@@ -180,8 +180,8 @@ header {
   min-height: 155px;
 }
 header #logo {
-  margin-top: 42px;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   float: left;
 }
 header #logo:hover {
@@ -189,7 +189,7 @@ header #logo:hover {
 }
 header #logo img {
   display: block;
-  margin: 0 0 0 30px;
+  margin: 0 0 0 20px;
 }
 /*-----------------------------------------------------------------------------------*/
 /*	Nav

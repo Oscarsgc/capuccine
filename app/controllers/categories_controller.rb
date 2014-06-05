@@ -32,6 +32,7 @@ before_filter :login_required, :only => [:new, :create, :edit, :update, :destroy
   end
 
   def update
+    @category = Category.find(params[:id])
     respond_to do |format|
       if @category.update(category_params)
         format.html { redirect_to @category}
@@ -42,6 +43,7 @@ before_filter :login_required, :only => [:new, :create, :edit, :update, :destroy
   end
 
   def destroy
+    @category = Category.find(params[:id])
     @category.destroy
     respond_to do |format|
       format.html { redirect_to categories_url }

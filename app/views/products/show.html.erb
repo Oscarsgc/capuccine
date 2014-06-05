@@ -1,4 +1,8 @@
-<p id="notice"><%= notice %></p>
+<div class="page-content">
+<div class="entry-content -cf">
+<% if notice %>
+<p class="infobox-success"><%= notice %></p>
+<%end%>
 <div id="project-gallery">
 					<div class="thumb" ><%= image_tag @product.photo.url %></div>
 				</div>
@@ -15,24 +19,5 @@
 						<%= link_to 'Volver', products_path , :class=>"link-button"%>
 					</div>
 				</div>
-				
-				<!-- related -->
-				<div class="cf"></div>
-				<div class="related-projects">
-					<div class="related-heading">RELATED PROJECTS</div>
-					<ul class="related-list cf">
-						<li>
-							<a href="#" class="thumb"><img src="img/dummies/f-01.jpg" alt="" /></a>
-							<a href="#" class="heading">Pellentesque habitant morbi</a>
-						</li>
-						<li>
-							<a href="#" class="thumb"><img src="img/dummies/f-02.jpg" alt="" /></a>
-							<a href="#" class="heading">Pellentesque habitant morbi</a>
-						</li>
-						<li>
-							<a href="#" class="thumb"><img src="img/dummies/f-03.jpg" alt="" /></a>
-							<a href="#" class="heading">Pellentesque habitant morbi</a>
-						</li>
-					</ul>
-				</div>
-				<!-- ENDS related -->
+</div>
+</div>

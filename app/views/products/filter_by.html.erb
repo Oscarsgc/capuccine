@@ -1,4 +1,4 @@
-<h1>Productos</h1>
+<h1> Productos</h1>
 
         <ul class="nav-categories cf">
         </ul>
@@ -18,4 +18,6 @@
         <!-- ENDS work list --> 
 
       <%= will_paginate @products, :previous_label => 'Anterior', :next_label => 'Siguiente' %>
+<center>
 <%= link_to 'Crear Producto', new_product_path, :class=>"link-button green" %>
+</center>

@@ -1,3 +1,5 @@
+<div class="page-content">
+<div class="entry-content -cf">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -16,8 +18,10 @@
 </p>
 <p>
 <br>
-	<%= image_tag @product.photo.url(:medium) %>
+	<%= image_tag @micropost.photo.url(:medium) %>
 </p>
 
 <%= link_to 'Editar', edit_micropost_path(@micropost) %> |
 <%= link_to 'Volver', microposts_path %>
+</div>
+</div>

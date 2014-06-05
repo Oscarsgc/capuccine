@@ -20,7 +20,7 @@ before_filter :login_required, :only => [:new, :create, :edit, :update, :destroy
 
   def create
     @micropost = Micropost.new(micropost_params)
-    #@micropost = current_user.microposts.build(micropost_params)
+    @micropost.user_id = current_user.id
     respond_to do |format|
       if @micropost.save
         format.html { redirect_to @micropost}

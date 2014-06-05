@@ -1,3 +1,5 @@
+<div class="page-content">
+<div class="entry-content -cf">
 <%= form_for @user do |f| %>
   <%= f.error_messages %>
   <p>
@@ -18,3 +20,5 @@
   </p>
   <p><%= f.submit (@user.new_record? ? "Registrarse" : "Update"), :class => "link-button green"%></p>
 <% end %>
+</div>
+</div>

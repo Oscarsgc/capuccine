@@ -1,32 +1,68 @@
-<br>
-<br><h1>Novedades</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Titulo</th>
-      <th>Contenido</th>
-      <th>Usuario</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @microposts.each do |micropost| %>
-      <tr>
-        <td><%= micropost.title %></td>
-        <td><%= micropost.content %></td>
-        <td><%= micropost.user_id %></td>
-        <td><%= link_to 'Ver', micropost %></td>
-        <td><%= link_to 'Editar', edit_micropost_path(micropost) %></td>
-        <td><%= link_to 'Eliminar', micropost, method: :delete, data: { confirm: 'Seguro de eliminar el post?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'Crear Post', new_micropost_path %>
+<h2>Noticias y Novedades</h2>
+<!-- posts list -->
+        <div id="posts-list" class="cf"> 
+        <% @microposts.each do |micropost| %>  
+          <article class="cf">
+            <div class="feature-image">
+              <a href="/microposts/<%= micropost.id%>" ><%= image_tag micropost.photo.url %></a>
+            </div>
+            <div class="entry-title">
+              <div class="meta"><%= micropost.created_at.strftime("%d/%m/%Y") %> <a href="#" class="author">Por <%= User.find(micropost.user_id).username %></a></div>
+              <a href="/microposts/<%= micropost.id%>" class="post-heading" ><%= micropost.title %></a>
+            </div>
+            <div class="excerpt">
+              <%= micropost.content %> 
+            </div>  
+            <a href="/microposts/<%= micropost.id%>" class="action-button">Leer mas...</a> 
+            <%= link_to 'Editar', edit_micropost_path(micropost), :class=>"link-button blue" %>
+            <%= link_to 'Eliminar', micropost, method: :delete, data: { confirm: 'Seguro de eliminar el post?' }, :class=>"link-button red" %>
+          </article>
+        <%end%>
+          <%= link_to 'Crear Post', new_micropost_path, :class=>"link-button green"%>
+        </div>
+        <!-- ENDS post list -->
+        
+        <!-- SIDEBAR -->
+        <aside id="sidebar">
+        
+          <ul>
+            <li class="block">
+              <h4 class="heading">ARCHIVOS</h4>
+              <ul>
+                <li class="cat-item"><a href="#" >Mayo 2014</a> (1)</li>
+                <li class="cat-item"><a href="#" >Abril 2014</a> (2)</li>
+                <li class="cat-item"><a href="#" >Marzo 2014</a> (6)</li>
+                <li class="cat-item"><a href="#" >Febrero 2014</a> (12)</li>
+              </ul>
+            </li>
+            
+            <li class="block">
+              <h4 class="heading">Noticias/Novedades</h4>
+              
+              <div class="small-posts-list ">
+                
+                <div class="post cf">
+                  <a href="#" class="thumb"><img src="img/dummies/54x54-a.jpg" alt="Post"></a>
+                  <div class="post-head">
+                    <a href="#">Pellentesque habitant morbi senectus </a><span class="meta"> Mar 12 <a href="#" >By ansimuz</a></span>
+                  </div>
+                </div>
+                
+                <div class="post cf">
+                  <a href="#" class="thumb"><img src="img/dummies/54x54-b.jpg" alt="Post"></a>
+                  <div class="post-head">
+                    <a href="#">Pellentesque habitant morbi senectus </a><span class="meta"> Mar 12 <a href="#" >By ansimuz</a></span>
+                  </div>
+                </div>
+                
+                <div class="post cf">
+                  <a href="#" class="thumb"><img src="img/dummies/54x54-c.jpg" alt="Post"></a>
+                  <div class="post-head">
+                    <a href="#">Pellentesque habitant morbi senectus </a><span class="meta"> Mar 12 <a href="#" >By ansimuz</a></span>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </aside>
+        <!-- ENDS SIDEBAR -->
