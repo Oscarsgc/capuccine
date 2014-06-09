@@ -15,14 +15,14 @@ gem 'sprockets', '2.11.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem "paperclip", "~> 4.1"
 
-group :development, :test do
-  gem 'sqlite3'
-end
+#group :development, :test do
+ # gem 'sqlite3'
+#end
 
-group :production do
+#group :production do
   gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
-end
+#end
 
 gem 'mysql2', '~> 0.3.16'
 gem 'mysql'
