@@ -60,6 +60,10 @@ Spa::Application.configure do
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
   config.assets.precompile += %w( search.js )
+  config.serve_static_assets = false
+  config.assets.compress = true
+  config.assets.compile = true
+  config.assets.digest = true
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
@@ -68,6 +72,8 @@ Spa::Application.configure do
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found).
   config.i18n.fallbacks = true
+  config.assets.css_compressor = :yui
+  config.assets.js_compressor = :uglifier
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
