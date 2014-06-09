@@ -8,14 +8,17 @@
           <li class="facebook"><a href="https://www.facebook.com/germainedecapucciniesp"  title="Facebook" ></a></li>
           <li class="googleplus"><a href="https://plus.google.com/+Germaine-de-capuccini/posts"  title="googleplus" ></a></li>
           <li class="twitter"><a href="https://twitter.com/Germaine_Esp"  title="twitter" ></a></li>
-        </ul>
+        
         <!-- ENDS social-bar -->
         
+        </ul>
+        
+        <%if current_user%>
+        <p align="right"><a href="/logout" class="link-button">Cerrar Sesion</a></p>
+        <%end%>
       </header>
       <!-- ENDS HEADER -->
-      <%if current_user%>
-        <p align="right"><a href="/logout">Cerrar Sesion</a></p>
-        <%end%>
+      
       <!-- NAV -->
       <nav class="cf">
         <ul id="nav" class="sf-menu">
