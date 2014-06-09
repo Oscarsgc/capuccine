@@ -16,7 +16,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem "paperclip", "~> 4.1"
 
 #group :development, :test do
- # gem 'sqlite3'
+  gem 'sqlite3'
 #end
 
 #group :production do
