@@ -23,3 +23,13 @@ production:
   database: db/production.sqlite3
   pool: 5
   timeout: 5000
+
+  #production:
+  #adapter: mysql
+  #encoding: utf8
+  #reconnect: false
+  #database: germaine_rails
+  #pool: 5
+  #username: germain_web
+  #password: $aTbRsXrT$
+  #host: mysql.germaine-de-capuccini.com.bo

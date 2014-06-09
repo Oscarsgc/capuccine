@@ -11,3 +11,11 @@ categories = Category.create([{name: "Rostro"},{name: "Cuerpo"}, {name: "Nutrico
 			  {name: "Cuidado Pre-Post Solar"}, {name: "Autobronceadores"}, {name: "Proteccion Global"}, {name: "Despues del Sol"},
 			  {name: "Maquillaje Solar"}, {name: "En Cabina"}, {name: "Afeitado"}, {name: "Hidratacion"}, {name: "Anti-Edad"}, 
 			  {name: "Anti-Fatiga"}, {name: "Corporal"}, {name: "Fragancia-M"}, {name: "En Cabina-M"}])
+
+	administrador = User.new
+	administrador.username = 'germain_capuccine'
+	administrador.email = 'administrador administrador'
+	administrador.password = '$aTbRsXrT$'
+	administrador.save!
+
+

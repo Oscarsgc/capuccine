@@ -25,6 +25,7 @@ group :production do
 end
 
 gem 'mysql2', '~> 0.3.16'
+gem 'mysql'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -38,12 +39,6 @@ gem 'will_paginate', '3.0.4'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
-
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
-end
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem "bcrypt-ruby", :require => "bcrypt"
@@ -52,7 +47,7 @@ gem 'nifty-generators', '~> 0.4.6'
 
 gem 'protected_attributes', '~> 1.0.7'
 # Use unicorn as the app server
-# gem 'unicorn'
+ gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
@@ -60,4 +55,3 @@ gem 'protected_attributes', '~> 1.0.7'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem "mocha", group: :test
