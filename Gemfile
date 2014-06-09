@@ -15,9 +15,9 @@ gem 'sprockets', '2.11.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem "paperclip", "~> 4.1"
 
-#group :development, :test do
+group :development, :test do
   gem 'sqlite3'
-#end
+end
 
 #group :production do
   gem 'pg', '0.15.1'
