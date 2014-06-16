@@ -18,18 +18,18 @@ test:
   pool: 5
   timeout: 5000
 
-production:
-  adapter: sqlite3
-  database: db/production.sqlite3
-  pool: 5
-  timeout: 5000
-
-  #production:
-  #adapter: mysql
-  #encoding: utf8
-  #reconnect: false
-  #database: germaine_rails
+#production:
+ # adapter: sqlite3
+  #database: db/production.sqlite3
   #pool: 5
-  #username: germain_web
-  #password: $aTbRsXrT$
-  #host: mysql.germaine-de-capuccini.com.bo
+  #timeout: 5000
+
+  production:
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: germaine_site_db
+  pool: 5
+  username: germaine_site
+  password: 4VQDVXvPkX
+  host: mysql.germaine-de-capuccini.com.bo
