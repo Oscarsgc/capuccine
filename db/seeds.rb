@@ -6,11 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-categories = Category.create([{name: "Rostro"},{name: "Cuerpo"}, {name: "Nutricosmetica"}, {name: "Cosmetica Organica"},
-			 {name: "Maquillaje"}, {name: "Cosmeceutica"}, {name: "Depilacion"}, {name: "Fragancia"},
-			  {name: "Cuidado Pre-Post Solar"}, {name: "Autobronceadores"}, {name: "Proteccion Global"}, {name: "Despues del Sol"},
-			  {name: "Maquillaje Solar"}, {name: "En Cabina"}, {name: "Afeitado"}, {name: "Hidratacion"}, {name: "Anti-Edad"}, 
-			  {name: "Anti-Fatiga"}, {name: "Corporal"}, {name: "Fragancia-M"}, {name: "En Cabina-M"}])
+categories = Category.create([{name: "Hidratacion"},{name: "Anti Edad Global"}, {name: "Anti Arrugas"}, {name: "Lifting-Firmeza"},
+			 {name: "Anti Manchas"}, {name: "Nutricion"}, {name: "Luminosidad-Vitalidad"}, {name: "Piel Grasa"},
+			  {name: "Piel Impura"}, {name: "Piel Sensible"}, {name: "Facial Universo Options"}, {name: "Corporal Perfect Forms"},
+			  {name: "Maquillaje Solar"}, {name: "Proteccion Global"}, {name: "Hidratacion-M"}, {name: "Anti-Edad"}, {name: "Anti-Fatiga"},
+			  {name: "En Cabina-M"}, {name: "Sperience Naturae"}, {name: "Sperience Delicatessen"}, {name: "Sperience Privilege"}])
 
 	administrador = User.new
 	administrador.username = 'germain_capuccine'
