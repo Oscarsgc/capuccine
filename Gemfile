@@ -14,6 +14,12 @@ gem 'sprockets', '2.11.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 gem "paperclip", "~> 4.1"
+gem 'dropbox'
+gem 'paperclipdropbox'
+gem 'dropbox-sdk'
+gem 'dropbox-api'
+gem 'carrierwave-dropbox'
+gem "paperclip-dropbox", ">= 1.1.7"
 
 group :development, :test do
   gem 'sqlite3'
